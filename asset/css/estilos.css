@@ -26,3 +26,7 @@
     border: 1px solid gray;
     color: gray;
 }
+
+.fondo-login{
+    background-color: rgba(0, 0, 0, 0.938);
+}
