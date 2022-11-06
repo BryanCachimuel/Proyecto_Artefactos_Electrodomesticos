@@ -11,8 +11,8 @@
     </div>
       <form action="verificar.php" method="POST" class="col-3 login" autocomplete="off">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Correo Electrónico: </label>
-            <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="correo" class="form-label">Correo Electrónico: </label>
+            <input type="email" name="correo" class="form-control" id="correo" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Contraseña: </label>
@@ -23,9 +23,11 @@
             </div>
             <input type="password" name="password" class="form-control" id="password">
         </div>
-        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        <div class="d-grid gap-2">
+           <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </div>
     </form>
-    <div class="login col-3">
+    <div class="login col-3 mt-3">
         Nuevo en Artefctos? <a href="registrar.php" class="crear_cuenta">Create una Cuenta</a>
     </div>
 </div>
