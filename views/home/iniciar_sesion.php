@@ -4,24 +4,29 @@
 
 <div class="fondo-login">
     <div class="icono">
-        <a href="/proyecto_artefactos/index.php"><i class="fa-solid fa-store"></i></a>
+        <a href="/proyecto_artefactos/index.php"><i class="fa-solid fa-store store-icono"></i></a>
     </div>
     <div class="titulo">
         Inicia Sesión   
     </div>
-      <form>
+      <form action="verificar.php" method="POST" class="col-3 login" autocomplete="off">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Correo Electrónico: </label>
+            <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="password" class="form-label">Contraseña: </label>
+            <div class="box-eye">
+                <button type="button" onclick="mostrarContrasenia('password','eyepassword')">
+                    <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
+                </button>
+            </div>
+            <input type="password" name="password" class="form-control" id="password">
         </div>
         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
     </form>
-    <div class="login">
-        Nuevo en Artefctos? <a href="registrar.php">Create una Cuenta</a>
+    <div class="login col-3">
+        Nuevo en Artefctos? <a href="registrar.php" class="crear_cuenta">Create una Cuenta</a>
     </div>
 </div>
 

@@ -29,4 +29,52 @@
 
 .fondo-login{
     background-color: rgba(0, 0, 0, 0.938);
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.icono, .titulo{
+    text-align: center;
+    color: #ffff;
+}
+
+.titulo{
+    margin-bottom: 12px;
+}
+
+.icono, .store-icono{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ffff;
+}
+
+.login{
+    color: #ffff;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgb(51, 47, 47);
+}
+
+/* poniendo dentro del input el icono del ojo para ver la contraseña */
+.box-eye{
+    position: relative;
+}
+
+.box-eye button{
+    border: none;
+    position: absolute;
+}
+
+.changePassword{
+    position: absolute;
+    top: 12px;
+    left: 350px;
+    color: rgb(51, 47, 47);
+    cursor: pointer;
+}
+
+.crear_cuenta{
+    text-decoration: none;
 }
