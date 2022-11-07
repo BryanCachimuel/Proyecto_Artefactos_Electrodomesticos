@@ -9,11 +9,16 @@
         }
 
         public function agregarNuevoUsuario($nombre, $correo, $password){
-            $statement = $this->PDO->prepare("INSERT INTO usarios values(null,:nombre,:correo,:password)");
+            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:nombre,:correo,:password)");
             $statement->bindParam(":nombre",$nombre);
-            $stament->bindParam(":correo",$correo);
-            $stament->bindParam(":password",$password);
-            return ($stament->execute()) ? true : false;
+            $statement->bindParam(":correo",$correo);
+            $statement->bindParam(":password",$password);
+            try {
+                $statement->execute();
+                return true;
+            } catch (PDOException $e) {
+                return false;
+            }
         }
     }
 ?>
