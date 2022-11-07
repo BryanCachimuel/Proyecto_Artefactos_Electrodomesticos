@@ -2,7 +2,7 @@
     class UsuariosController{
         private $model;
         public function __construct(){
-            require_once("../model/usuariosModel.php");
+            require_once("c://xampp/htdocs/proyecto_artefactos/model/usuariosModel.php");
             $this->model = new UsuariosModel();
         }
 

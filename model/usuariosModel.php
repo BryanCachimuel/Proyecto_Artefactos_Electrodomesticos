@@ -3,7 +3,7 @@
         private $PDO;
 
         public function __construct(){
-            require_once("../config/db.php");
+            require_once("c://xampp/htdocs/proyecto_artefactos/config/db.php");
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
