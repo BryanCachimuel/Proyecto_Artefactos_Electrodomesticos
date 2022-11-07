@@ -78,3 +78,7 @@
 .crear_cuenta{
     text-decoration: none;
 }
+
+#alertError{
+    margin: auto;
+}

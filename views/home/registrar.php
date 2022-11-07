@@ -12,11 +12,11 @@
       <form action="store.php" method="POST" class="col-3 login" autocomplete="off">
       <div class="mb-3">
             <label for="nombre" class="form-label">Nombre Completo: </label>
-            <input type="text" name="nombre" class="form-control" id="nombre">
+            <input type="text" name="nombre" value="<?= (!empty($_GET['nombre'])) ? $_GET['nombre'] : "" ?>" class="form-control" id="nombre">
         </div>
         <div class="mb-3">
             <label for="correo" class="form-label">Correo Electrónico: </label>
-            <input type="email" name="correo" class="form-control" id="correo" aria-describedby="emailHelp">
+            <input type="email" name="correo" value="<?= (!empty($_GET['correo'])) ? $_GET['correo'] : "" ?>" class="form-control" id="correo" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Contraseña: </label>
@@ -25,7 +25,7 @@
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
                 </button>
             </div>
-            <input type="password" name="password" class="form-control" id="password">
+            <input type="password" name="password" value="<?= (!empty($_GET['password'])) ? $_GET['password'] : "" ?>" class="form-control" id="password">
         </div>
 
         <div class="mb-3">
@@ -35,9 +35,13 @@
                     <i id="eyepassword2" class="fa-solid fa-eye changePassword"></i>
                 </button>
             </div>
-            <input type="password" name="confirmarPassword" class="form-control" id="password2">
+            <input type="password" name="confirmarPassword" value="<?= (!empty($_GET['confirmarPassword'])) ? $_GET['confirmarPassword'] : "" ?>" class="form-control" id="password2">
         </div>
-
+        <?php if(!empty($_GET['error'])): ?>
+            <div id="alertError" class="alert alert-danger mb-2" role="alert">
+                <?= !empty($_GET['error']) ? $_GET['error'] : "" ?>
+            </div>
+        <?php endif; ?>
         <div class="d-grid gap-2">
            <button type="submit" class="btn btn-primary">Crear Cuenta</button>
         </div>
