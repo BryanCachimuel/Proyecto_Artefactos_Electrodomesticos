@@ -1,5 +1,9 @@
 <?php
-    require_once("../head/head.php")
+    require_once("../head/head.php");
+    /* validar que exista un usuario logeado */
+    if(!empty($_SESSION['usuario'])){
+        header("Location:panel_control.php");
+    }
 ?>
 
 <div class="fondo-login">
