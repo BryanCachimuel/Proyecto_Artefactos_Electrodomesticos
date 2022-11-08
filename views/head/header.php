@@ -41,7 +41,7 @@
                         <a class="nav-link" href="#">Contactanos</a>
                     </li>
                 </ul>
-                <a href="/proyecto_artefactos/views/home/iniciar_sesion.php" class="boton">Cerrar Sesión</a>
+                <a href="/proyecto_artefactos/views/home/logout.php" class="boton">Cerrar Sesión</a>
             </div>
         <?php endif ?>  
 
