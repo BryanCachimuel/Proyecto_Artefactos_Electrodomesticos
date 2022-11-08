@@ -35,5 +35,10 @@
         public function encriptarContrasenia($contrasenia){
             return password_hash($contrasenia, PASSWORD_DEFAULT);
         }
+
+        public function verificarUsuario($correo, $password){
+            $keydb = $this->model->obtenerClave($correo);
+            return (password_verify($password,$keydb)) ? true : false;
+        }
     }
 ?>
