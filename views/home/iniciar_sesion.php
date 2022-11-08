@@ -23,6 +23,11 @@
             </div>
             <input type="password" name="password" class="form-control" id="password">
         </div>
+        <?php if(!empty($_GET['error'])): ?>
+            <div id="alertError" class="alert alert-danger mb-2" role="alert">
+                <?= !empty($_GET['error']) ? $_GET['error'] : "" ?>
+            </div>
+        <?php endif; ?>
         <div class="d-grid gap-2">
            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </div>
