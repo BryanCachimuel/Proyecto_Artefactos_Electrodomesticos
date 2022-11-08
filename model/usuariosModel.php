@@ -20,5 +20,12 @@
                 return false;
             }
         }
+
+        /* función encargada de obtener la contraseña de un usuario de la bdd */
+        public function obtenerClave($correo){
+            $statement = $this->PDO->prepare("SELECT password FROM usuarios WHERE correo = :correo");
+            $statement->bindParam(":correo", $correo);
+            return ($statement->execute()) ? $statement->fetch()['password'] : false;
+        }
     }
 ?>
