@@ -11,21 +11,40 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Productos Electricos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Precios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contactanos</a>
-            </li>
-        </ul>
-        <a href="/proyecto_artefactos/views/home/iniciar_sesion.php" class="boton">Iniciar Sesión</a>
-        <a href="/proyecto_artefactos/views/home/registrar.php" class="boton">Registrate</a>
-        </div>
+        <?php if(empty($_SESSION['usuario'])) : ?>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactanos</a>
+                    </li>
+                </ul>
+                <a href="/proyecto_artefactos/views/home/iniciar_sesion.php" class="boton">Iniciar Sesión</a>
+                <a href="/proyecto_artefactos/views/home/registrar.php" class="boton">Registrate</a>
+            </div>
+        <?php else: ?>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Productos Electricos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactanos</a>
+                    </li>
+                </ul>
+                <a href="/proyecto_artefactos/views/home/iniciar_sesion.php" class="boton">Cerrar Sesión</a>
+            </div>
+        <?php endif ?>  
+
     </div>
     </nav>
 
