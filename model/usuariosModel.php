@@ -27,5 +27,10 @@
             $statement->bindParam(":correo", $correo);
             return ($statement->execute()) ? $statement->fetch()['password'] : false;
         }
+
+        public function obtenerUsuarios(){
+            $statement = $this->PDO->prepare("SELECT * FROM usuarios");
+            return ($statement->execute()) ? $statement->fetchAll() : false;
+        }
     }
 ?>
