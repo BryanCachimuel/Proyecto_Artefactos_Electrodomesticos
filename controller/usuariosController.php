@@ -40,5 +40,9 @@
             $keydb = $this->model->obtenerClave($correo);
             return (password_verify($password,$keydb)) ? true : false;
         }
+
+        public function listarUsuarios(){
+            return ($this->model->obtenerUsuarios()) ? $this->model->obtenerUsuarios() : false;
+        }
     }
 ?>
