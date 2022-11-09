@@ -44,6 +44,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="listar.php">Lista de Usuarios</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Información
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarInformacion.php">Agregar Información</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <a href="/proyecto_artefactos/views/home/logout.php" class="boton">Cerrar Sesión</a>
                 </div>
