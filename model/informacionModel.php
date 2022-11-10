@@ -17,5 +17,10 @@
             $statement->bindParam(":contacto2",$contacto2);
             return ($statement->execute()) ? $this->PDO->lastInsertId() : false;  /* lastInsertId() -> retorna el ultimo id ingresado */
         }
+
+        public function listarInformacion(){
+            $statement = $this->PDO->prepare("SELECT * FROM informacion");
+            return ($statement->execute()) ? $statement->fetchAll() : false;
+         }
     }
 ?>
