@@ -11,5 +11,9 @@
             $id = $this->model->agregarInformacion($contenido, $describir, $direccion, $contacto, $contacto2);
             return ($id != false) ? header("Location:/proyecto_artefactos/views/home/agregarInformacion.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
         }
+
+        public function verlistaInformacion(){
+            return ($this->model->listarInformacion()) ? $this->model->listarInformacion() : false;
+        }
     }
 ?> 
