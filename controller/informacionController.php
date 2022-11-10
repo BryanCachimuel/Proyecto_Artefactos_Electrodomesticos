@@ -8,8 +8,8 @@
         }
 
         public function guardarInformacion($contenido, $describir, $direccion, $contacto, $contacto2){
-            $valorInformacion = $this->model->agregarInformacion($contenido, $describir, $direccion, $contacto, $contacto2);
-            return $valorInformacion;
+            $id = $this->model->agregarInformacion($contenido, $describir, $direccion, $contacto, $contacto2);
+            return ($id != false) ? header("Location:/proyecto_artefactos/views/home/agregarInformacion.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
         }
     }
-?>
+?> 

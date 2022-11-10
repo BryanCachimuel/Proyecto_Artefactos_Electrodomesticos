@@ -15,12 +15,7 @@
             $statement->bindParam(":direccion",$direccion);
             $statement->bindParam(":contacto",$contacto);
             $statement->bindParam(":contacto2",$contacto2);
-            try {
-                $statement->execute();
-                return true;
-            } catch (PDOException $e) {
-                return false;
-            }
+            return ($statement->execute()) ? $this->PDO->lastInsertId() : false;  /* lastInsertId() -> retorna el ultimo id ingresado */
         }
     }
 ?>
