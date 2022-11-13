@@ -7,8 +7,8 @@
             $this->model = new ProductosModel();
         }
 
-        public function guardarProductos($nombre_producto, $stock, $precio, $cantidad){
-            $id = $this->model->crearProducto($nombre_producto, $stock, $precio, $cantidad);
+        public function guardarProductos($nombre_producto, $stock, $precio_compra){
+            $id = $this->model->crearProducto($nombre_producto, $stock, $precio_compra);
             return ($id != false) ? header("Location:/proyecto_artefactos/views/home/agregarProductos.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
         }
     }
