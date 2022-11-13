@@ -3,8 +3,7 @@
     $obj = new ProductoController();
     $nombre_producto = $_POST['nombre_producto'];
     $stock = $_POST['stock'];
-    $precio = $_POST['precio'];
-    $cantidad =  $_POST['cantidad'];
+    $precio_compra = $_POST['precio_compra'];
 
-    $obj->guardarProductos($nombre_producto, $stock, $precio, $cantidad);
+    $obj->guardarProductos($nombre_producto, $stock, $precio_compra);
 ?>
