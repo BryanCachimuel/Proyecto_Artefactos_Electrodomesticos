@@ -39,7 +39,7 @@
                             <a class="nav-link active" aria-current="page" href="/proyecto_artefactos/views/home/panel_control.php">Productos Electricos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Precios</a>
+                            <a class="nav-link" href="/proyecto_artefactos/views/home/agregarProductos.php">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="listar.php">Lista de Usuarios</a>
