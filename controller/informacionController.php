@@ -15,5 +15,9 @@
         public function verlistaInformacion(){
             return ($this->model->listarInformacion()) ? $this->model->listarInformacion() : false;
         }
+
+        public function verInformacionporId($id){
+            return ($this->model->verInformacion($id) != false) ? $this->model->verInformacion($id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
+        }
     }
 ?> 
