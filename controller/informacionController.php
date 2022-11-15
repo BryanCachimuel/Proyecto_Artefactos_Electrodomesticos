@@ -19,5 +19,9 @@
         public function verInformacionporId($id){
             return ($this->model->verInformacion($id) != false) ? $this->model->verInformacion($id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
         }
+
+        public function actualizarRegistroInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2){
+            return ($this->model->actualizarInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2) != false) ? header("/proyecto_artefactos/views/home/editarInformacion.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
+        }
     }
 ?> 
