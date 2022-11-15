@@ -23,10 +23,21 @@
             return ($statement->execute()) ? $statement->fetchAll() : false;
          }
 
-         public function verInformacion($id){
+        public function verInformacion($id){
             $statement = $this->PDO->prepare("SELECT * FROM informacion WHERE id = :id LIMIT 1");
             $statement->bindParam(":id",$id);
             return ($statement->execute()) ? $statement->fetch() : false;
          }
+        
+        public function actualizarInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2){
+            $statement = $this->PDO->prepare("UPDATE información SET contenido = :contenido, describir = :describir, direccion = :direccion, contacto = :contacto, contacto2 = :contacto2");
+            $statement->bindParam(":contenido",$contenido);
+            $statement->bindParam(":describir",$describir);
+            $statement->bindParam(":direccion",$direccion);
+            $statement->bindParam(":contacto",$contacto);
+            $statement->bindParam(":contacto2",$contacto2);
+            $statement->bidParam(":id",$id);
+            return ($statement->execute()) ? $id : false;
+        }
     }
 ?>
