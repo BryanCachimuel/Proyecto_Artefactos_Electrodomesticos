@@ -7,6 +7,7 @@
     $obj = new InformacionController();
     $informacion = $obj->verlistaInformacion();
 ?>
+
 <div class="container mt-4">
   <div class="row">
     <div class="col-5">
@@ -62,7 +63,7 @@
                   <label for="descripcion" class="form-label">Descripción:</label>
                   <textarea class="form-control" name="descripcion"  id="descripcion" rows="2" disabled ><?= $info[2] ?></textarea>
                 </div> 
-                <div class="form-group row">
+                <div class="form-group row mb-3">
                  <label for="contacto" class="col-sm-2 col-form-label">Contacto 1:</label>
                   <div class="col-sm-4">
                     <input type="text" name="contacto" class="form-control" id="contacto" value="<?= $info[4] ?>" disabled>
@@ -72,8 +73,8 @@
                     <input type="text" name="contacto2" class="form-control" id="contacto2" value="<?= $info[5] ?>" disabled>
                   </div>
                 </div>
-                  <div class="mb-3 mt-3">
-                    <button type="submit" class="btn btn-success">Editar</button>
+                <div class="mb-3 mt-3">
+                    <a href="editarInformacion.php?id=<?= $info[0] ?>" class="btn btn-success">Actualizar</a>
                     <a href="" class="btn btn-danger">Eliminar</a>
                 </div>
             </div>
