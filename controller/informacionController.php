@@ -21,7 +21,7 @@
         }
 
         public function actualizarRegistroInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2){
-            return ($this->model->actualizarInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2) != false) ? header("/proyecto_artefactos/views/home/editarInformacion.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
+            return ($this->model->actualizarInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2) != false) ? header("Location:/proyecto_artefactos/views/home/agregarInformacion.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarInformacion.php");
         }
     }
 ?> 

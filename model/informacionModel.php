@@ -30,13 +30,13 @@
          }
         
         public function actualizarInformacion($id, $contenido, $describir, $direccion, $contacto, $contacto2){
-            $statement = $this->PDO->prepare("UPDATE información SET contenido = :contenido, describir = :describir, direccion = :direccion, contacto = :contacto, contacto2 = :contacto2");
+            $statement = $this->PDO->prepare("UPDATE informacion SET contenido = :contenido, describir = :describir, direccion = :direccion, contacto = :contacto, contacto2 = :contacto2 WHERE id = :id");
             $statement->bindParam(":contenido",$contenido);
             $statement->bindParam(":describir",$describir);
             $statement->bindParam(":direccion",$direccion);
             $statement->bindParam(":contacto",$contacto);
             $statement->bindParam(":contacto2",$contacto2);
-            $statement->bidParam(":id",$id);
+            $statement->bindParam(":id",$id);
             return ($statement->execute()) ? $id : false;
         }
     }
