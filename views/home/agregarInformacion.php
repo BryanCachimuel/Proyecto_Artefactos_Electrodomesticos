@@ -51,11 +51,11 @@
             <div class="container mt-2">
              <div class="form-group row">
               <label for="contenido" class="col-sm-2 col-form-label">Título:</label>
-                <div class="col-sm-5"> 
+                <div class="col-sm-4"> 
                   <input type="text" name="contenido" class="form-control" id="contenido" value="<?= $info[1] ?>" disabled>
                 </div>
                 <label for="direccion" class="col-sm-2 col-form-label">Dirección: </label>
-                <div class="col-sm-3"> 
+                <div class="col-sm-4"> 
                   <input type="text" name="direccion" class="form-control" id="direccion"  value="<?= $info[3] ?>" disabled>
                 </div>
               </div>  
@@ -75,16 +75,35 @@
                 </div>
                 <div class="mb-3 mt-3">
                     <a href="editarInformacion.php?id=<?= $info[0] ?>" class="btn btn-success">Actualizar</a>
-                    <a href="" class="btn btn-danger">Eliminar</a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$info[0]?>">Eliminar</a>
                 </div>
             </div>
         </card-body>
       </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="id<?=$info[0]?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar este registro?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                   <h3><?=$info[1]?></h3>
+                </div>
+                <div class="modal-footer">
+                  <a href="/proyecto_artefactos/helpers/eliminarInformacion.php?id=<?= $info[0]?>" class="btn btn-danger">Eliminar</a>
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+              </div>                         
+            </div>
+        </div>
+
       <?php endforeach; ?>
     </div>
   </div>
 </div>
-
 
 <?php
     require_once("../head/footer.php")
