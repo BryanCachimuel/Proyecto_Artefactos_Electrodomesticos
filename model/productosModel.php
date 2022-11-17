@@ -25,5 +25,11 @@
             $statement = $this->PDO->prepare("SELECT * FROM productos");
             return ($statement->execute()) ? $statement->fetchAll() : false;
         }
+
+        public function verProductoporId($id){
+            $statement = $this->PDO->prepare("SELECT * FROM productos WHERE id = :id LIMIT 1");
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? $statement->fetch() : false;
+        }
     }
 ?>
