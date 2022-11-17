@@ -15,5 +15,9 @@
         public function verlistaProductos(){
             return ($this->model->listarProductos()) ? $this->model->listarProductos() : false;
         }
+
+        public function ProductoporId($id){
+            return ($this->model->verProductoporId($id) != false) ? $this->model->verProductoporId($id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
+        }
     }
 ?>
