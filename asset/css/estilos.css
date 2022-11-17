@@ -82,3 +82,17 @@
 #alertError{
     margin: auto;
 }
+
+#titulo_tarjeta{
+    text-align: center;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+.parrafo{
+    color: rgb(102, 101, 101);
+}
+
+.filas{
+    color: rgb(174, 171, 171);
+}
