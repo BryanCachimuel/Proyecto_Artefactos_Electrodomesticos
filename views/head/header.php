@@ -1,5 +1,5 @@
 <?php
-    require_once("head.php");
+    require_once("c://xampp/htdocs/proyecto_artefactos/views/head/head.php");
 ?>
 
 <div class="fondo_menu">
@@ -53,18 +53,32 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="/proyecto_artefactos/views/home/logout.php" class="boton">Cerrar Sesión</a>
+                    <a class="boton"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
                 </div>
-            <?php endif ?>  
 
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Está Seguro de que quiere Cerrar la Sesión? Usuario: <strong><?= $_SESSION['usuario'] ?></strong></h1>
+                            </div>
+                            <div class="modal-footer mx-auto">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <a href="/proyecto_artefactos/views/home/logout.php" class="btn btn-success">Cerrar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <?php endif ?>           
         </div>
     </nav>
-
  </div>
 </div>
 
 <!-- esta clase solo se va autilizar para agregar el código ya sea externo o el código que se va a estar visualizando en cada pestaña -->
 <div class="fondo">
-
 
 
