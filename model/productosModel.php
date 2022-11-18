@@ -31,5 +31,15 @@
             $statement->bindParam(":id", $id);
             return ($statement->execute()) ? $statement->fetch() : false;
         }
+
+        public function actualizarProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra){
+            $statement = $this->PDO->prepare("UPDATE productos SET nombre_producto = :nombre_producto, descripcion = :descripcion, stock = :stock, precio_compra = :precio_compra WHERE id = :id");
+            $statement->bindParam(":nombre_producto",$nombre_producto);
+            $statement->bindParam(":descripcion",$descripcion);
+            $statement->bindParam(":stock",$stock);     
+            $statement->bindParam(":precio_compra",$precio_compra);
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? $id : false;
+        }
     }
 ?>
