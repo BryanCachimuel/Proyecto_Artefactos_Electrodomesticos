@@ -8,12 +8,10 @@
     $users = $obj->listarUsuarios();
 ?>
 
-    <h3 class="text-center mt-4">Bienvenido <?= $_SESSION['usuario'] ?></h3>
-
-   
     <div class="container">
         <div class="row">
-            <div class="col-6 mx-auto mt-2">
+            <div class="col-6 mx-auto mt-5">
+                <h3 class="text-center mb-3">Lista de Usuarios Registrados</h3>
                  <table class="table text-center">
                     <thead class="bg-primary">
                         <tr class="text-white">

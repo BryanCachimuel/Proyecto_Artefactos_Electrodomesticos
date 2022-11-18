@@ -13,7 +13,7 @@
         <div class="row">
             <?php foreach($productos as $prod) : ?>
                 <div class="col-4">
-                    <div class="card">
+                    <div class="card mb-3">
                         <div id="titulo_tarjeta" class="card-header bg-primary text-white">
                             Producto: <?= $prod[1]?>
                         </div>
