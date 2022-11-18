@@ -41,5 +41,11 @@
             $statement->bindParam(":id", $id);
             return ($statement->execute()) ? $id : false;
         }
+
+        public function eliminar($id){
+            $statement = $this->PDO->prepare("DELETE FROM productos WHERE id = :id");
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? true : false;
+        }
     }
 ?>
