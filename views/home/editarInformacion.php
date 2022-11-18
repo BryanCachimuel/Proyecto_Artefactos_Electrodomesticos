@@ -15,8 +15,7 @@
         </div>
         <div class="card-body">
             <form action="/proyecto_artefactos/helpers/actualizarInformacion.php" method="POST" autocomplete="off">
-                <div class="mb-3">
-                    <label for="id" class="form-label">Id:</label>
+                <div>
                     <input type="hidden" name="id" class="form-control" id="id" value="<?= $informacion['id'] ?>">
                 </div>
                 <div class="mb-3">

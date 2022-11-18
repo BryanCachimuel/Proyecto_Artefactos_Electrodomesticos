@@ -8,20 +8,20 @@
      $productos = $obj->verlistaProductos();
 ?>
 
-<div class="container mt-4">
+<div class="container mt-5">
   <div class="row">
     <div class="col-2">
     
-      <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#agregarProductos">
         Agregar Producto
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="agregarProductos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-info">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Producto</h1>
+              <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Agregar Producto</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
@@ -64,15 +64,19 @@
             <th scope="col">Precio Compra</th>
             <th scope="col">Valor Total Compra</th>
             <th scope="col">Precio Venta</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
           </tr>
         </thead>
           <?php foreach($productos as $prod) : ?>
-            <tbody class="bg-secondary text-white">
+            <tbody class="bg-dark text-white">
               <th><?= $prod[1] ?></th>
               <th><?= $prod[3] ?></th>
               <th>$<?= $prod[4] ?></th>
               <th>$<?= $prod[5] ?></th>
-              <th>$<?= $prod[6] ?></th>             
+              <th>$<?= $prod[6] ?></th> 
+              <th><a href="editarProducto.php?id=<?= $prod[0] ?>" class="btn btn-outline-info"><i class="fa fa-edit"></i></a></th> 
+              <th><a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a></th>    
             </tbody>
           <?php endforeach; ?>
       </table>
