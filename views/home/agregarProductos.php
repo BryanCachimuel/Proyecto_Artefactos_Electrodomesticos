@@ -76,8 +76,29 @@
               <th>$<?= $prod[5] ?></th>
               <th>$<?= $prod[6] ?></th> 
               <th><a href="editarProducto.php?id=<?= $prod[0] ?>" class="btn btn-outline-info"><i class="fa fa-edit"></i></a></th> 
-              <th><a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a></th>    
+              <th><a href="" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#idproducto<?=$prod[0]?>"><i class="fa fa-trash"></i></a></th>    
             </tbody>
+
+            <!-- Modal -->
+            <div class="modal fade" id="idproducto<?=$prod[0]?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar este registro?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <h3><strong><?=$prod[1]?><strong></h3>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="/proyecto_artefactos/helpers/productos/eliminarProductos.php?id=<?= $prod[0]?>" class="btn btn-danger">Eliminar</a>
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                  </div>                         
+                </div>
+            </div>
+
+
           <?php endforeach; ?>
       </table>
     </div> 
