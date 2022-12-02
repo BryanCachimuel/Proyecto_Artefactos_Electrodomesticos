@@ -7,9 +7,9 @@
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
-
-        public function crearProducto($nombre_producto, $descripcion, $stock, $precio_compra){
-            $statement = $this->PDO->prepare("INSERT INTO productos values(null,:nombre_producto,:descripcion,:stock,:precio_compra,:valor_total_compra,:precio_venta)");
+        // no funciona-> quitar el parametro imagen_producto y quitarlo de la consulta y del statement
+        public function crearProducto($nombre_producto, $descripcion, $stock, $precio_compra, $imagen_producto){
+            $statement = $this->PDO->prepare("INSERT INTO productos values(null,:nombre_producto,:descripcion,:stock,:precio_compra,:valor_total_compra,:precio_venta,:imagen_producto)");
             $statement->bindParam(":nombre_producto",$nombre_producto);
             $statement->bindParam(":descripcion",$descripcion);
             $statement->bindParam(":stock",$stock);     
@@ -18,6 +18,7 @@
             $statement->bindParam(":valor_total_compra", $valor_compra); 
             $valor_venta = ((($precio_compra*22)/100)+$precio_compra);
             $statement->bindParam(":precio_venta",  $valor_venta);
+            $statement->bindParam(":imagen_producto", $imagen_producto);
             return ($statement->execute()) ? $this->PDO->lastInsertId() : false;
         }
 
