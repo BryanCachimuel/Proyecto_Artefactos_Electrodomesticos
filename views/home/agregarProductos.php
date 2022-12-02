@@ -25,7 +25,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
-                <form action="/proyecto_artefactos/helpers/productosformulario.php" method="POST">
+                <form action="/proyecto_artefactos/helpers/productosformulario.php" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label for="nombre_producto" class="form-label">Nombre Producto:</label>
                   <input type="text" name="nombre_producto" class="form-control" id="nombre_producto">
@@ -44,6 +44,11 @@
                     <input type="number" step="any" name="precio_compra" class="form-control" id="precio_compra">
                   </div>
                 </div>
+                <br>
+                <div class="mb-3">
+                  <label for="imagen_producto" class="form-label">Imagen Producto:</label>
+                  <input type="file" class="form-control" accept="image/*" name="imagen_producto" id="imagen_producto" require="">
+                </div>
               </div>
               <div class="modal-footer"> 
                 <button type="submit" class="btn btn-primary">Agregar</button>
@@ -59,6 +64,7 @@
       <table class="table text-center">
         <thead class="bg-info">
           <tr class="text-dark">
+            <th scope="col">Imagen</th>
             <th scope="col">Nombre</th>
             <th scope="col">Stock</th>
             <th scope="col">Precio Compra</th>
@@ -70,6 +76,7 @@
         </thead>
           <?php foreach($productos as $prod) : ?>
             <tbody class="bg-dark text-white">
+              <th><img class="img-thumbnail" width="100px" src="/proyecto_artefactos//asset/image/<?php echo $prod['imagen_producto'];?>" /></th>
               <th><?= $prod[1] ?></th>
               <th><?= $prod[3] ?></th>
               <th>$<?= $prod[4] ?></th>
