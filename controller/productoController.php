@@ -6,9 +6,9 @@
             require_once("c://xampp/htdocs/proyecto_artefactos/model/productosModel.php");
             $this->model = new ProductosModel();
         }
-
-        public function guardarProductos($nombre_producto, $descripcion, $stock, $precio_compra){
-            $id = $this->model->crearProducto($nombre_producto, $descripcion, $stock, $precio_compra);
+        // si no funciona quitar el parámetro $imagen_producto en los dos métodos
+        public function guardarProductos($nombre_producto, $descripcion, $stock, $precio_compra, $imagen_producto){
+            $id = $this->model->crearProducto($nombre_producto, $descripcion, $stock, $precio_compra, $imagen_producto);
             return ($id != false) ? header("Location:/proyecto_artefactos/views/home/agregarProductos.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
         }
 
