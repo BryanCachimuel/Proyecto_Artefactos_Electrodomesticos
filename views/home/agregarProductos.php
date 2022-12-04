@@ -61,7 +61,7 @@
     </div>
 
     <div class="col-10">
-      <table class="table text-center">
+      <table class="table text-center" id="productos">
         <thead class="bg-info">
           <tr class="text-dark">
             <th scope="col">Imagen</th>
@@ -76,7 +76,7 @@
         </thead>
           <?php foreach($productos as $prod) : ?>
             <tbody class="bg-dark text-white">
-              <th><img class="img-thumbnail" width="100px" src="/proyecto_artefactos//asset/image/<?php echo $prod['imagen_producto'];?>" /></th>
+              <th><img class="img-thumbnail" width="100px" src="/proyecto_artefactos/asset/image/<?php echo $prod['imagen_producto'];?>" /></th>
               <th><?= $prod[1] ?></th>
               <th><?= $prod[3] ?></th>
               <th>$<?= $prod[4] ?></th>
