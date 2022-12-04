@@ -13,14 +13,19 @@
         <div class="row">
             <?php foreach($productos as $prod) : ?>
                 <div class="col-4">
-                    <div class="card mb-3">
-                        <div id="titulo_tarjeta" class="card-header bg-primary text-white">
-                            Producto: <?= $prod[1]?>
-                        </div>
-                        <div class="card-body">
-                            <p class="parrafo"><strong>Descripción:</strong> <?= $prod[2]?></p>
-                            <p class="parrafo"><strong>Stock:</strong> <?= $prod[3]?></p>
-                            <p class="parrafo"><strong>Precio de Venta:</strong> $<?=$prod[6]?></p> 
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img class="img-fluid rounded-start mt-5" src="/proyecto_artefactos/asset/image/<?php echo $prod['imagen_producto'];?>" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Producto: <?= $prod[1]?></h5>
+                                    <p class="parrafo"><strong>Descripción:</strong> <?= $prod[2]?></p>
+                                    <p class="parrafo"><strong>Stock:</strong> <?= $prod[3]?></p>
+                                    <p class="parrafo"><strong>Precio de Venta:</strong> $<?=$prod[6]?></p> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
