@@ -43,10 +43,11 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Información
+                                Información Varial
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarInformacion.php">Agregar Información</a></li>
+                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarmarcas.php">Agregar Marcas</a></li>
                             </ul>
                         </li>
                     </ul>
