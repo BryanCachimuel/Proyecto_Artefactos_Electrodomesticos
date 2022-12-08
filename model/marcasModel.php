@@ -9,10 +9,22 @@
             $this->PDO = $pdo->conexion();
         }
 
-        public function crearMarca($marcas){
-            $statement = $this->PDO->prepare("INSERT INTO marca VALUES(null, :marcas)");
+        public function crearMarca($marcas, $pais, $nombre_proveedor, $contacto_proveedor){
+            $statement = $this->PDO->prepare("INSERT INTO marca VALUES(null, :marcas, :pais, :nombre_proveedor, :contacto_proveedor)");
             $statement->bindParam(":marcas", $marcas);
+            $statement->bindParam(":pais", $pais);
+            $statement->bindParam(":nombre_proveedor", $nombre_proveedor);
+            $statement->bindParam(":contacto_proveedor", $contacto_proveedor);
             return ($statement->execute()) ? $this->PDO->lastInsertId() : false;
+        }
+
+        public function listarMarcas(){
+            $statement = $this->PDO->prepare("SELECT * FROM marca");
+            if($statement->execute()){
+                return $statement->fetchAll();
+            }else{
+                return false;
+            }
         }
     }
 
