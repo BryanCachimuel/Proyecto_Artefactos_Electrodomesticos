@@ -7,9 +7,17 @@
             $this->model = new MarcasModel();
         }
 
-        public function guardarMarca($marcas){
-            $id = $this->model->crearMarca($marcas);
+        public function guardarMarca($marcas, $pais, $nombre_proveedor, $contacto_proveedor){
+            $id = $this->model->crearMarca($marcas, $pais, $nombre_proveedor, $contacto_proveedor);
             return ($id != false) ? header("Location:/proyecto_artefactos/views/home/agregarmarcas.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php");
+        }
+
+        public function verListaMarcas(){
+            if($this->model->listarMarcas()){
+                return $this->model->listarMarcas();
+            }else{
+                return false;
+            }
         }
     }
 ?>
