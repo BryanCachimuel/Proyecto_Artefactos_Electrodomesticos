@@ -32,6 +32,16 @@
             $statement->bindParam(":id",$id);
             return ($statement->execute()) ? $statement->fetch() : false;
         }
+
+        public function actualizarMarca($id, $marcas, $pais, $nombre_proveedor, $contacto_proveedor){
+            $statement = $this->PDO->prepare("UPDATE marca SET marcas = :marcas, pais = :pais, nombre_proveedor = :nombre_proveedor, contacto_proveedor = :contacto_proveedor WHERE id = :id");
+            $statement->bindParam(":marcas",$marcas);
+            $statement->bindParam(":pais",$pais);
+            $statement->bindParam(":nombre_proveedor",$nombre_proveedor);
+            $statement->bindParam(":contacto_proveedor",$contacto_proveedor);
+            $statement->bindParam(":id",$id);
+            return ($statement->execute()) ? $id : false;
+        }
     }
 
 ?>
