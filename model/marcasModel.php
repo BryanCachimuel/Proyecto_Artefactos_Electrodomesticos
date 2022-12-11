@@ -26,6 +26,12 @@
                 return false;
             }
         }
+
+        public function verMarcas($id){
+            $statement = $this->PDO->prepare("SELECT * FROM marca WHERE id = :id LIMIT 1");
+            $statement->bindParam(":id",$id);
+            return ($statement->execute()) ? $statement->fetch() : false;
+        }
     }
 
 ?>
