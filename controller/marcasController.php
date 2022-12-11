@@ -19,5 +19,9 @@
                 return false;
             }
         }
+
+        public function verMarcasporId($id){
+            return ($this->model->verMarcas($id) != false) ? $this->model->verMarcas($id) : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php");
+        }
     }
 ?>
