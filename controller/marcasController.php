@@ -23,5 +23,9 @@
         public function verMarcasporId($id){
             return ($this->model->verMarcas($id) != false) ? $this->model->verMarcas($id) : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php");
         }
+
+        public function actualizarRegistroMarca($id, $marcas, $pais, $nombre_proveedor, $contacto_proveedor){
+            return ($this->model->actualizarMarca($id, $marcas, $pais, $nombre_proveedor, $contacto_proveedor) != false) ? header("Location:/proyecto_artefactos/views/home/agregarmarcas.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php");
+        }
     }
 ?>
