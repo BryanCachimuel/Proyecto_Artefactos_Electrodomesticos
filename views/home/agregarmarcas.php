@@ -75,7 +75,7 @@
                             </div>
                             </div>
                             <div class="mb-3 mt-3">
-                                <a href="editarMarcas.php?id=<?= $info[0] ?>" class="btn btn-success">Actualizar</a>
+                                <a href="editarMarcas.php?id=<?= $mc[0] ?>" class="btn btn-success">Actualizar</a>
                                 <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$mc[0]?>">Eliminar</a>
                             </div>
                         </div>
