@@ -23,19 +23,19 @@
                     <div class="accordion-body">
                         <form action="/proyecto_artefactos/helpers/marcas/marcasformulario.php" method="POST" autocomplete="off">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control"  name="marcas" placeholder="Samsung">
+                                <input type="text" class="form-control"  name="marcas">
                                 <label for="marcas">Nombre de la Marca:</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control"  name="pais" placeholder="Samsung">
+                                <input type="text" class="form-control"  name="pais">
                                 <label for="pais">País:</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control"  name="nombre_proveedor" placeholder="Samsung">
+                                <input type="text" class="form-control"  name="nombre_proveedor">
                                 <label for="nombre_proveedor">Nombre Proveedor:</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control"  name="contacto_proveedor" placeholder="Samsung">
+                                <input type="text" class="form-control"  name="contacto_proveedor">
                                 <label for="contacto_proveedor">Contacto Proveedor:</label>
                             </div>
                             <div class="mx-auto">
@@ -94,7 +94,7 @@
                         <h3><?=$mc[1]?></h3>
                         </div>
                         <div class="modal-footer">
-                        <a href="/proyecto_artefactos/helpers/eliminarMarcas.php?id=<?= $mc[0]?>" class="btn btn-danger">Eliminar</a>
+                        <a href="/proyecto_artefactos/helpers/marcas/eliminarMarcas.php?id=<?= $mc[0]?>" class="btn btn-danger">Eliminar</a>
                         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
                         </div>
                     </div>                         
