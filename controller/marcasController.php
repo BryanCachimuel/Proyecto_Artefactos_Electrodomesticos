@@ -27,5 +27,9 @@
         public function actualizarRegistroMarca($id, $marcas, $pais, $nombre_proveedor, $contacto_proveedor){
             return ($this->model->actualizarMarca($id, $marcas, $pais, $nombre_proveedor, $contacto_proveedor) != false) ? header("Location:/proyecto_artefactos/views/home/agregarmarcas.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php");
         }
+
+        public function eliminarMarcas($id){
+            return ($this->model->eliminar($id)) ? header("Location:/proyecto_artefactos/views/home/agregarmarcas.php") : header("Location:/proyecto_artefactos/views/home/agregarmarcas.php?id=".$id);
+        }
     }
 ?>
