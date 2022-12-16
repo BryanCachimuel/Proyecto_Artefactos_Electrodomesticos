@@ -74,7 +74,13 @@
             <th scope="col">Eliminar</th>
           </tr>
         </thead>
-          <?php foreach($productos as $prod) : ?>
+          <?php 
+            $cantidadStock = 0;
+            $valorCompra = 0;
+            $valorVenta = 0;
+            $valorGanancia = 0;
+            foreach($productos as $prod) : 
+          ?>
             <tbody class="bg-dark text-white">
               <th><img class="img-thumbnail" width="100px" src="/proyecto_artefactos/asset/image/<?php echo $prod['imagen_producto'];?>" /></th>
               <th><?= $prod[1] ?></th>
@@ -105,10 +111,54 @@
                 </div>
             </div>
 
-
+          <?php 
+            $cantidadStock += $prod[3];
+            $valorCompra += $prod[5];
+            $valorVenta += $prod[6];
+            $valorGanancia = $valorVenta - $prod[4];
+          ?>  
           <?php endforeach; ?>
       </table>
     </div> 
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-body bg-info text-center">
+        <p>Cantidad en Stock: <strong class="text-white"><?php echo $cantidadStock; ?></strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-body bg-info text-center">
+          <p>Valor Total Compra: <strong class="text-white">$<?php echo $valorCompra; ?></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-body bg-info text-center">
+          <p>Valor Total Venta: <strong class="text-white">$<?php echo $valorVenta; ?></strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="card">
+        <div class="card-body bg-info text-center">
+          <p>Valor Total Ganancia: <strong class="text-white">$<?php echo $valorGanancia; ?></strong></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
