@@ -33,8 +33,8 @@
             return ($statement->execute()) ? $statement->fetch() : false;
         }
 
-        public function actualizarProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra, $imagen_producto){
-            $statement = $this->PDO->prepare("UPDATE productos SET nombre_producto = :nombre_producto, descripcion = :descripcion, stock = :stock, precio_compra = :precio_compra, valor_total_compra = :valor_total_compra, precio_venta = :precio_venta, imagen_producto = :imagen_producto WHERE id = :id");
+        public function actualizarProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra){
+            $statement = $this->PDO->prepare("UPDATE productos SET nombre_producto = :nombre_producto, descripcion = :descripcion, stock = :stock, precio_compra = :precio_compra, valor_total_compra = :valor_total_compra, precio_venta = :precio_venta WHERE id = :id");
             $statement->bindParam(":nombre_producto",$nombre_producto);
             $statement->bindParam(":descripcion",$descripcion);
             $statement->bindParam(":stock",$stock);     
@@ -43,7 +43,6 @@
             $statement->bindParam(":valor_total_compra", $valor_compra);
             $valor_venta = ((($precio_compra*25)/100)+$precio_compra);
             $statement->bindParam(":precio_venta",  $valor_venta); 
-            $statement->bindParam(":imagen_producto", $imagen_producto);
             $statement->bindParam(":id", $id);
             return ($statement->execute()) ? $id : false;
         }
