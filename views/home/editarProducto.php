@@ -36,13 +36,6 @@
                     <input type="number" name="precio_compra" class="form-control" id="precio_compra"  value="<?= $producto['precio_compra'] ?>">
                   </div>
                 </div>
-                <div class="mb-3 mt-3">
-                  <label for="imagen_producto" class="form-label">Imagen Producto:</label>
-                    <div class="mt-2 mb-2">
-                        <img class="img-thumbnail" width="160px" src="/proyecto_artefactos/asset/image/<?php echo $producto['imagen_producto'];?>" />
-                    </div>
-                  <input type="file" class="form-control" accept="image/*" name="imagen_producto" id="imagen_producto" require="" value="<?= $producto['imagen_producto'] ?>">
-                </div>
                 <div class="mb-3 mt-4">
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
                     <a href="agregarProductos.php" class="btn btn-warning">Cancelar</a>
