@@ -20,8 +20,8 @@
             return ($this->model->verProductoporId($id) != false) ? $this->model->verProductoporId($id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
         }
 
-        public function actualizarRegistroProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra, $imagen_producto){
-            return ($this->model->actualizarProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra,$imagen_producto) != false) ? header("Location:/proyecto_artefactos/views/home/agregarProductos.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
+        public function actualizarRegistroProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra){
+            return ($this->model->actualizarProducto($id, $nombre_producto, $descripcion, $stock, $precio_compra) != false) ? header("Location:/proyecto_artefactos/views/home/agregarProductos.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/agregarProductos.php");
         }
 
         public function eliminarProducto($id){
