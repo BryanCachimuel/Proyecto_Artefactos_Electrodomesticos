@@ -16,7 +16,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Agregar Marcas
+                        <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp; Agregar Marcas
                     </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -38,8 +38,10 @@
                                 <input type="text" class="form-control"  name="contacto_proveedor">
                                 <label for="contacto_proveedor">Contacto Proveedor:</label>
                             </div>
+                            <hr class="mt-4">
                             <div class="mx-auto">
-                                <button type="submit" class="btn btn-primary">Agregar Marca</button>
+                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Agregar</button>
+                                <a href="agregarmarca.php" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i> Cancelar</a>
                             </div>
                         </form>
                     </div>
@@ -69,14 +71,15 @@
                             <div class="col-sm-4">
                                 <input type="text" name="nombre_proveedor" class="form-control" id="nombre_proveedor" value="<?= $mc[3] ?>" disabled>
                             </div>
-                            <label for="contacto2" class="col-sm-2 col-form-label">Cont. Proveedor: </label>
+                            <label for="contacto2" class="col-sm-2 col-form-label">N. Contacto: </label>
                             <div class="col-sm-4">
                                 <input type="text" name="contacto_proveedor" class="form-control" id="contacto_proveedor" value="<?= $mc[4] ?>" disabled>
                             </div>
                             </div>
+                  
                             <div class="mb-3 mt-3">
-                                <a href="editarMarcas.php?id=<?= $mc[0] ?>" class="btn btn-success">Actualizar</a>
-                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$mc[0]?>">Eliminar</a>
+                                <a href="editarMarcas.php?id=<?= $mc[0] ?>" class="btn btn-success"><i class="fa-regular fa-pen-to-square"></i> Actualizar</a>
+                                <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$mc[0]?>"><i class="fa-solid fa-trash-can"></i> Eliminar</a>
                             </div>
                         </div>
                     </card-body>
