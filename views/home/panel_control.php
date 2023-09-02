@@ -8,7 +8,7 @@
     $productos = $obj->verlistaProductos();
 ?>
 
-    <h4 class="text-center mt-4"><i class="fa-sharp fa-solid fa-user-tie"></i> Bienvenido <?= $_SESSION['usuario'] ?></h4>
+    <h4 class="text-center mt-4"><i class="fa-sharp fa-solid fa-user-tie"></i> Bienvenido <strong style="color: #2874a6;"><?= $_SESSION['usuario'] ?></strong></h4>
     <div class="container mt-3">
         <div class="row">
             <?php foreach($productos as $prod) : ?>
@@ -20,10 +20,10 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Producto: <?= $prod[1]?></h5>
+                                    <h5 class="card-title" style="color:#2874a6;">Producto: <?= $prod[1]?></h5>
                                     <p class="parrafo"><strong>Descripción:</strong> <?= $prod[2]?></p>
                                     <p class="parrafo"><strong>Stock:</strong> <?= $prod[3]?></p>
-                                    <p class="parrafo"><strong>Precio de Venta:</strong> $<?=$prod[6]?></p> 
+                                    <p class="parrafo"><strong>Precio de Venta:</strong> <b> $ </b><?=$prod[6]?></p> 
                                 </div>
                             </div>
                         </div>
