@@ -110,13 +110,13 @@ body {
     display: grid;
     gap: 1em;
     justify-items: center;
-    width: 260px;
+    width: 460px;
     overflow: hidden;
     margin: 0 auto;
 }
 
 .about__icon {
-    width: 40px;
+    width: 60px;
 }
 
 /* Knowledge */
