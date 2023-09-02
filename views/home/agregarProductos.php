@@ -13,7 +13,7 @@
     <div class="col-2">
     
       <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#agregarProductos">
-        Agregar Producto
+        <i class="fa-solid fa-cart-shopping"></i> Agregar Producto
       </button>
 
       <!-- Modal -->
@@ -21,17 +21,17 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-info">
-              <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Agregar Producto</h1>
+              <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel"><i class="fa-solid fa-cart-shopping"></i> Agregar Producto</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
               <div class="modal-body">
                 <form action="/proyecto_artefactos/helpers/productosformulario.php" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="nombre_producto" class="form-label">Nombre Producto:</label>
+                  <label for="nombre_producto" class="form-label"><i class="fa-solid fa-basket-shopping"></i> Nombre Producto:</label>
                   <input type="text" name="nombre_producto" class="form-control" id="nombre_producto">
                 </div>
                 <div class="mb-3">
-                  <label for="descripcion" class="form-label">Descripción Producto:</label>
+                  <label for="descripcion" class="form-label"><i class="fa-solid fa-file-pen"></i> Descripción Producto:</label>
                   <textarea class="form-control" name="descripcion"  id="descripcion" rows="2"></textarea>
                 </div>
                 <div class="form-group row">
@@ -46,13 +46,13 @@
                 </div>
                 <br>
                 <div class="mb-3">
-                  <label for="imagen_producto" class="form-label">Imagen Producto:</label>
+                  <label for="imagen_producto" class="form-label"><i class="fa-solid fa-file-image"></i> Imagen Producto:</label>
                   <input type="file" class="form-control" accept="image/*" name="imagen_producto" id="imagen_producto" require="">
                 </div>
               </div>
               <div class="modal-footer"> 
-                <button type="submit" class="btn btn-primary">Agregar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i> Agregar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i> Cancelar</button>
               </div>
             </form>
           </div>
