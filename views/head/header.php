@@ -10,7 +10,7 @@
             <?php if(empty($_SESSION['usuario'])) : ?>
                 <a class="navbar-brand" href="/proyecto_artefactos/index.php">Artefactos Electrodomesticos</a>
             <?php else: ?>
-                <a class="navbar-brand" href="/proyecto_artefactos/views/home/panel_control.php">Artefactos Electrodomesticos</a>
+                <a class="navbar-brand" href="/proyecto_artefactos/views/home/panel_control.php"><i class="fa-solid fa-house-chimney"></i> Artefactos Electrodomesticos</a>
             <?php endif ?>  
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,18 +35,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/proyecto_artefactos/views/home/agregarProductos.php">Productos</a>
+                            <a class="nav-link active" aria-current="page" href="/proyecto_artefactos/views/home/agregarProductos.php"><i class="fa-solid fa-basket-shopping"></i> Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="listar.php">Lista de Usuarios</a>
+                            <a class="nav-link" href="listar.php"><i class="fa-solid fa-users"></i> Lista de Usuarios</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Información Varial
+                                <i class="fa-solid fa-list"></i> Información Varia
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarInformacion.php">Agregar Información</a></li>
-                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarmarcas.php">Agregar Marcas</a></li>
+                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarInformacion.php"><i class="fa-solid fa-list"></i> Agregar Información</a></li>
+                                <li><a class="dropdown-item" href="/proyecto_artefactos/views/home/agregarmarcas.php"><i class="fa-solid fa-copyright"></i> Agregar Marcas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -61,8 +61,8 @@
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Está Seguro de que quiere Cerrar la Sesión? Usuario: <strong><?= $_SESSION['usuario'] ?></strong></h1>
                             </div>
                             <div class="modal-footer mx-auto">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                <a href="/proyecto_artefactos/views/home/logout.php" class="btn btn-success">Cerrar Sesión</a>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa-regular fa-circle-xmark"></i> Cancelar</button>
+                                <a href="/proyecto_artefactos/views/home/logout.php" class="btn btn-success"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
                             </div>
                         </div>
                     </div>
