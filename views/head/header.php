@@ -94,31 +94,28 @@
 
     <main>
         <section class="container about">
-            <h2 class="subtitle">¿Qué aprenderás en encontraras en nuestro almacen?</h2>
+            <h2 class="subtitle">¿Qué encontraras en nuestro almacen?</h2>
             <p class="about__paragraph">Todo lo necesario para que tu lo puedas comprar y llenar tu casa con los Electrodomesticos
                 que siempre as soñado
             </p>
 
             <div class="about__main">
                 <article class="about__icons">
-                    <img src="./images/shapes.svg" class="about__icon">
-                    <h3 class="about__title">CSS Layouts</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <img src="asset/image/1670116622_Televisión.png" class="about__icon">
+                    <h3 class="about__title">Televisiones</h3>
+                    <p class="about__paragrah">Televisores de todo tipo de marca y tamaños</p>
                 </article>
 
                 <article class="about__icons">
-                    <img src="./images/paint.svg" class="about__icon">
-                    <h3 class="about__title">Animaciones</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <img src="asset/image/1672358920_Armario.png" class="about__icon">
+                    <h3 class="about__title">Armarios</h3>
+                    <p class="about__paragrah">Armarios para ropa o para la alacena entre otros objetos de madera</p>
                 </article>
 
                 <article class="about__icons">
-                    <img src="./images/code.svg" class="about__icon">
-                    <h3 class="about__title">Sass</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
+                    <img src="asset/image/1672360852_Batidora.png" class="about__icon">
+                    <h3 class="about__title">Cafeteras</h3>
+                    <p class="about__paragrah">Cafeteras de todas las marcas y demas utencillos de cosina</p>
                 </article>
             </div>
         </section>
@@ -139,13 +136,7 @@
         </section>
 
         <section class="footer__copy container">
-            <div class="footer__social">
-                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
-                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
-                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
-            </div>
-
-            <h3 class="footer__copyright">Derechos reservados &copy; Jordan Alexander</h3>
+            <h3 class="footer__copyright">Derechos reservados &copy; Rixler Corp</h3>
         </section>
     </footer>
 
