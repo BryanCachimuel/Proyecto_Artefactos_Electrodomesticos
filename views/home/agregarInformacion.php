@@ -10,25 +10,25 @@
 
 <div class="container mt-4">
   <div class="row">
-    <div class="col-5">
+    <div class="col-4">
       <div class="card">
         <div class="card-header bg-primary">
-          <h3 class="text-white">Agregar Información</h3>
+          <h4 class="text-white"><i class="fa-solid fa-newspaper"></i> Agregar Información</h4>
         </div>
         <div class="card-body">
           <form action="/proyecto_artefactos/helpers/informacionformulario.php" method="POST">
             <div class="mb-3">
-              <label for="contenido" class="form-label">Contenido:</label>
+              <label for="contenido" class="form-label">Tipos de Productos:</label>
               <input type="text" name="contenido" class="form-control" id="contenido">
-            </div>
-            <div class="mb-3">
-              <label for="descripcion" class="form-label">Descripción:</label>
-              <textarea class="form-control" name="descripcion"  id="descripcion" rows="2"></textarea>
             </div>
             <div class="mb-3">
               <label for="direccion" class="form-label">Dirección: </label>
               <input type="text" name="direccion" class="form-control" id="direccion">
             </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción:</label>
+              <textarea class="form-control" name="descripcion"  id="descripcion" rows="2"></textarea>
+            </div> 
             <div class="mb-3">
               <label for="contacto" class="form-label">Contacto 1:</label>
               <input type="text" name="contacto" class="form-control" id="contacto">
@@ -37,20 +37,20 @@
               <label for="contacto2" class="form-label">Contacto 2: </label>
               <input type="text" name="contacto2" class="form-control" id="contacto2">
             </div>
-              <button type="submit" class="btn btn-primary">Agregar Información</button>
-              <a href="agregarInformacion.php" class="btn btn-warning">Cancelar</a>
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Agregar</button>
+              <a href="agregarInformacion.php" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i> Cancelar</a>
             </form>
         </div>
       </div>
     </div>
 
-    <div class="col-7">
+    <div class="col-8">
     <?php foreach($informacion as $info) : ?>
       <div class="card mb-4">
         <card-body>
             <div class="container mt-2">
              <div class="form-group row">
-              <label for="contenido" class="col-sm-2 col-form-label">Título:</label>
+              <label for="contenido" class="col-sm-2 col-form-label">Tipos:</label>
                 <div class="col-sm-4"> 
                   <input type="text" name="contenido" class="form-control" id="contenido" value="<?= $info[1] ?>" disabled>
                 </div>
@@ -74,8 +74,8 @@
                   </div>
                 </div>
                 <div class="mb-3 mt-3">
-                    <a href="editarInformacion.php?id=<?= $info[0] ?>" class="btn btn-success">Actualizar</a>
-                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$info[0]?>">Eliminar</a>
+                    <a href="editarInformacion.php?id=<?= $info[0] ?>" class="btn btn-success"><i class="fa-regular fa-pen-to-square"></i> Actualizar</a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$info[0]?>"><i class="fa-solid fa-trash-can"></i> Eliminar</a>
                 </div>
             </div>
         </card-body>
@@ -93,8 +93,8 @@
                    <h3><?=$info[1]?></h3>
                 </div>
                 <div class="modal-footer">
-                  <a href="/proyecto_artefactos/helpers/eliminarInformacion.php?id=<?= $info[0]?>" class="btn btn-danger">Eliminar</a>
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+                  <a href="/proyecto_artefactos/helpers/eliminarInformacion.php?id=<?= $info[0]?>" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Eliminar</a>
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal"><i class="fa-solid fa-circle-xmark"></i> Cancelar</button>
                 </div>
               </div>                         
             </div>
