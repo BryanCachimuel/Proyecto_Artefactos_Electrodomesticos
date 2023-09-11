@@ -32,5 +32,19 @@
             $statement = $this->PDO->prepare("SELECT * FROM usuarios");
             return ($statement->execute()) ? $statement->fetchAll() : false;
         }
+
+        public function usuarioporId($id){
+            $statement = $this->PDO->prepare("SELECT * FROM usuarios WHERE id = :id LIMIT 1");
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? $statement->fetch() : false;
+        }
+
+        public function actualizarUsuario($id, $nombre, $correo){
+            $statement = $this->PDO->prepare("UPDATE usuarios SET nombre = :nombre, correo = :correo WHERE id = :id");
+            $statement->bindParam(":nombre", $nombre);
+            $statement->bindParam(":correo", $correo);
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? $id : false;
+        }
     }
 ?>
