@@ -44,5 +44,13 @@
         public function listarUsuarios(){
             return ($this->model->obtenerUsuarios()) ? $this->model->obtenerUsuarios() : false;
         }
+
+        public function usuarioporId($id){
+            return ($this->model->usuarioporId($id) != false) ? $this->model->usuarioporId($id) : header("Location:/proyecto_artefactos/views/home/listar.php");
+        }
+
+        public function actualizarRegistroUsuario($id, $nombre, $correo){
+            return ($this->model->actualizarUsuario($id, $nombre, $correo) != false) ? header("Location:/proyecto_artefactos/views/home/listar.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/listar.php");
+        }
     }
 ?>
