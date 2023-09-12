@@ -46,5 +46,11 @@
             $statement->bindParam(":id", $id);
             return ($statement->execute()) ? $id : false;
         }
+
+        public function eliminarUsuario($id){
+            $statement = $this->PDO->prepare("DELETE FROM usuarios WHERE id = :id");
+            $statement->bindParam(":id", $id);
+            return ($statement->execute()) ? true : false;
+        }
     }
 ?>
