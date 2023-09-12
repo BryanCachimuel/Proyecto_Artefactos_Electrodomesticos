@@ -52,5 +52,9 @@
         public function actualizarRegistroUsuario($id, $nombre, $correo){
             return ($this->model->actualizarUsuario($id, $nombre, $correo) != false) ? header("Location:/proyecto_artefactos/views/home/listar.php?id=".$id) : header("Location:/proyecto_artefactos/views/home/listar.php");
         }
+
+        public function eliminarRegistroUsuario($id){
+            return ($this->model->eliminarUsuario($id)) ? header("Location:/proyecto_artefactos/views/home/listar.php") : header("Location:/proyecto_artefactos/views/home/listar.php?id=".$id);
+        }
     }
 ?>
