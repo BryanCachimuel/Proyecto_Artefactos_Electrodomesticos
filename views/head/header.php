@@ -109,13 +109,13 @@
                 <article class="about__icons">
                     <img src="asset/image/1672358920_Armario.png" class="about__icon">
                     <h3 class="about__title">Armarios</h3>
-                    <p class="about__paragrah">Armarios para ropa o para la alacena entre otros objetos de madera</p>
+                    <p class="about__paragrah">Armarios para ropa o para la alacena</p>
                 </article>
 
                 <article class="about__icons">
                     <img src="asset/image/1672360852_Batidora.png" class="about__icon">
                     <h3 class="about__title">Cafeteras</h3>
-                    <p class="about__paragrah">Cafeteras de todas las marcas y demas utencillos de cosina</p>
+                    <p class="about__paragrah">Cafeteras y demas utencillos</p>
                 </article>
             </div>
         </section>

@@ -64,9 +64,9 @@ body {
 
 .cta {
     display: inline-block;
-    background-color: #2091F9;
     justify-self: center;
     color: #fff;
+    border: 1px solid #2091F9;
     text-decoration: none;
     padding: 13px 30px;
     border-radius: 32px;
